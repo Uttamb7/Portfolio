@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0c17">
+  <meta name="description" content="Uttam Bhattarai builds reliable distributed systems, offline-first products, and measured machine-learning infrastructure.">
+  <meta property="og:title" content="Uttam Bhattarai — Software Engineer">
+  <meta property="og:description" content="Selected engineering work across distributed systems, product infrastructure, machine learning, and commerce.">
+  <meta property="og:type" content="website">
+  <title>Uttam Bhattarai — Software Engineer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230d0c17%22/><text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 font-size=%2254%22 fill=%22%23ff5c8a%22>七</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to selected work</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Uttam Bhattarai, home"><span class="brand-mark" aria-hidden="true">七</span><span>UTTAM<span class="dot">.</span>DEV</span></a>
+    <nav aria-label="Primary navigation"><a href="#work">Work</a><a href="#about">About</a><a href="mailto:uttambhattarai778@gmail.com">Contact</a></nav>
+    <a class="header-github" href="https://github.com/Uttamb7" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Software engineer · RIT ’26</p>
+        <h1 id="hero-title">I engineer systems<br>with a <em>reason to exist.</em></h1>
+        <p class="hero-lede">Distributed control planes. Offline-first travel tools. Language models built from first principles. I turn domain constraints into software that can be tested, measured, and explained.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="mailto:uttambhattarai778@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div>
+        <ul class="signal-list" aria-label="Engineering focus"><li>Systems thinking</li><li>Measured outcomes</li><li>Product judgment</li></ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="speed-lines"></div><div class="sun"></div>
+        <div class="portrait-card"><span class="portrait-kicker">ENGINEER / 01</span><span class="portrait-initials">UB</span><span class="portrait-caption">BUILD · MEASURE · ITERATE</span></div>
+        <p class="vertical-type">問題から設計へ</p><span class="burst burst-one">+</span><span class="burst burst-two">✦</span>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Technology highlights"><div><span>DISTRIBUTED SYSTEMS</span><b>✦</b><span>TYPESCRIPT</span><b>✦</b><span>PYTORCH</span><b>✦</b><span>JAVA</span><b>✦</b><span>REACT</span><b>✦</b><span>TESTING</span></div></section>
+
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> Selected work / case files</p><h2 id="work-title">Four problems.<br>Four deliberate systems.</h2></div>
+        <p>Each project starts with a concrete domain constraint—not a technology looking for somewhere to land.</p>
+      </div>
+
+      <article class="project reveal">
+        <div class="project-number">01</div>
+        <div class="project-visual visual-nimbus">
+          <div class="visual-label">CONTROL PLANE</div>
+          <div class="topology" aria-hidden="true"><span class="node node-core">N</span><span class="node node-a">API</span><span class="node node-b">PAY</span><span class="node node-c">CAT</span><span class="node node-d">ORD</span><span class="node node-e">USR</span><span class="node node-f">INV</span></div>
+          <div class="metric-strip"><span>7 services</span><span>live telemetry</span><span>failure drills</span></div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><span>Distributed systems</span><span>2026</span></div><h3>Nimbus</h3>
+          <p class="project-thesis">A local operations control plane that turns noisy commerce-service behavior into actionable health, incident, and dependency context.</p>
+          <dl class="case-grid">
+            <div><dt>Challenge</dt><dd>Operators need to reason about cascading failures across seven services—not stare at isolated green/red checks.</dd></div>
+            <div><dt>Engineering</dt><dd>Modeled service topology, telemetry, incidents, guarded GraphQL access, and operational actions behind one control surface.</dd></div>
+            <div><dt>Evidence</dt><dd>Dockerized workload, scenario-driven failure docs, contract tests, smoke checks, and a CI-delivered container image.</dd></div>
+          </dl>
+          <ul class="tech-list" aria-label="Nimbus technologies"><li>Node.js</li><li>GraphQL</li><li>Docker</li><li>CI/CD</li></ul>
+          <a class="project-link" href="https://github.com/Uttamb7/Nimbus" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-number">02</div>
+        <div class="project-visual visual-trip">
+          <div class="visual-label">OFFLINE-FIRST PWA</div>
+          <div class="route-map" aria-hidden="true"><span class="place nepal">KTM<small>Nepal</small></span><span class="route"></span><span class="place japan">TYO<small>Japan</small></span><span class="map-dot dot-a"></span><span class="map-dot dot-b"></span><span class="map-dot dot-c"></span></div>
+          <div class="metric-strip"><span>32-day itinerary</span><span>offline shell</span><span>multi-device sync</span></div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><span>Travel infrastructure</span><span>2026</span></div><h3>Trip Planner</h3>
+          <p class="project-thesis">A resilient planning workspace for a real Nepal × Japan journey, designed for unreliable networks and shared decision-making.</p>
+          <dl class="case-grid">
+            <div><dt>Challenge</dt><dd>Keep itinerary, budget, documents, maps, and group changes usable while travelers move between devices and lose connectivity.</dd></div>
+            <div><dt>Engineering</dt><dd>Built a local-first data core with IndexedDB, an installable service-worker shell, explicit sync boundaries, and capability-scoped trip sharing.</dd></div>
+            <div><dt>Evidence</dt><dd>Static-export deployment, tested Firestore rules, accessible responsive flows, release gates, and real MapLibre trip context.</dd></div>
+          </dl>
+          <ul class="tech-list" aria-label="Trip Planner technologies"><li>Next.js</li><li>TypeScript</li><li>Firebase</li><li>MapLibre</li><li>PWA</li></ul>
+          <div class="project-actions"><a class="project-link" href="https://github.com/Uttamb7/trip_planner" target="_blank" rel="noreferrer">View source <span>↗</span></a><a class="project-link secondary" href="https://powan55.github.io/trip_planner/" target="_blank" rel="noreferrer">Live product <span>↗</span></a></div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-number">03</div>
+        <div class="project-visual visual-transformer">
+          <div class="visual-label">ML SYSTEMS</div>
+          <div class="attention-chart" aria-hidden="true"><span style="--x:12%;--y:76%;--s:28px"></span><span style="--x:27%;--y:61%;--s:34px"></span><span style="--x:42%;--y:48%;--s:40px"></span><span style="--x:57%;--y:35%;--s:46px"></span><span style="--x:72%;--y:22%;--s:52px"></span><div class="chart-line"></div><strong>2.30×</strong><small>fused attention throughput</small></div>
+          <div class="metric-strip"><span>88% coverage</span><span>32 tests</span><span>10.8M params</span></div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><span>Machine-learning systems</span><span>2026</span></div><h3>Tiny Transformer LM</h3>
+          <p class="project-thesis">A GPT-style language model built to understand and measure the machinery—not wrap a hosted model in a chat UI.</p>
+          <dl class="case-grid">
+            <div><dt>Challenge</dt><dd>Make tokenization, causal attention, training stability, evaluation, and sampling correct enough to inspect independently.</dd></div>
+            <div><dt>Engineering</dt><dd>Implemented byte-level BPE, masked multi-head attention, checkpointed training, exact perplexity evaluation, and deterministic generation.</dd></div>
+            <div><dt>Evidence</dt><dd>Manual/fused numerical parity tests, 2.30× fused attention throughput, 88% coverage, and measured scaling tradeoffs.</dd></div>
+          </dl>
+          <ul class="tech-list" aria-label="Tiny Transformer technologies"><li>Python</li><li>PyTorch</li><li>CUDA</li><li>NumPy</li><li>pytest</li></ul>
+          <a class="project-link" href="https://github.com/Uttamb7/tiny-transformer-lm" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-number">04</div>
+        <div class="project-visual visual-store">
+          <div class="visual-label">COMMERCE WORKFLOWS</div>
+          <div class="store-stack" aria-hidden="true"><div><span>ANGULAR SPA</span><b>Browse · Cart · Admin</b></div><div><span>SPRING REST API</span><b>Controllers · Domain logic</b></div><div><span>PERSISTENCE</span><b>DAO contracts · JSON data</b></div></div>
+          <div class="metric-strip"><span>75+ tests</span><span>96% code coverage</span><span>3-tier design</span></div>
+        </div>
+        <div class="project-copy">
+          <div class="project-topline"><span>Full-stack commerce · Team project</span><span>2023</span></div><h3>E‑Store Footware</h3>
+          <p class="project-thesis">A role-aware footwear store that keeps customer buying flows and administrative inventory operations separate and testable.</p>
+          <dl class="case-grid">
+            <div><dt>Challenge</dt><dd>Coordinate product discovery, cart state, checkout, inventory mutation, and order visibility across customer and admin roles.</dd></div>
+            <div><dt>Engineering</dt><dd>Separated Angular views, Spring REST controllers, domain models, and DAO persistence into explicit tiers with permission-aware flows.</dd></div>
+            <div><dt>Evidence</dt><dd>75+ backend tests, reported 96% code coverage, tier-specific test suites, acceptance criteria, and team-owned design documentation.</dd></div>
+          </dl>
+          <ul class="tech-list" aria-label="E-Store technologies"><li>Java</li><li>Spring</li><li>Angular</li><li>TypeScript</li><li>Maven</li></ul>
+          <a class="project-link" href="https://github.com/Uttamb7/E-Store-Footware" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="about-index" aria-hidden="true">05 / ABOUT</div>
+      <div class="about-copy"><p class="eyebrow"><span></span> How I work</p><h2 id="about-title">Curious about the system.<br><em>Accountable to the user.</em></h2><p>I’m Uttam Bhattarai, a Software Engineering graduate from Rochester Institute of Technology. I enjoy work where architecture, product behavior, and operational reality meet.</p><p>My strongest projects make their tradeoffs visible: offline fallback over assumed connectivity, measured model quality over vague “AI-powered” claims, and failure scenarios over happy-path demos.</p></div>
+      <div class="principles" aria-label="Engineering principles"><div><span>01</span><h3>Start with constraints</h3><p>The real environment decides the architecture.</p></div><div><span>02</span><h3>Prove the behavior</h3><p>Tests, telemetry, and benchmarks turn claims into evidence.</p></div><div><span>03</span><h3>Design for failure</h3><p>Offline paths and guardrails belong in the first design.</p></div></div>
+    </section>
+
+    <section class="contact-section" aria-labelledby="contact-title">
+      <p class="eyebrow light"><span></span> Next chapter</p><h2 id="contact-title">Let’s build the thing<br>worth maintaining.</h2>
+      <p>I’m open to software engineering opportunities across backend, infrastructure, full-stack, and ML systems.</p>
+      <a class="contact-link" href="mailto:uttambhattarai778@gmail.com">uttambhattarai778@gmail.com <span aria-hidden="true">↗</span></a>
+      <div class="contact-meta"><span>Rochester Institute of Technology · 2026</span><a href="https://github.com/Uttamb7" target="_blank" rel="noreferrer">github.com/Uttamb7 ↗</a></div>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year">2026</span> Uttam Bhattarai</span><span>Designed with intent. Built without dependencies.</span><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>

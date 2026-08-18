@@ -10,6 +10,3 @@ python -m http.server 4173
 
 Then visit `http://localhost:4173`.
 
-## Publish
-
-The site is ready for GitHub Pages: **Settings → Pages → Deploy from a branch → main / root**.

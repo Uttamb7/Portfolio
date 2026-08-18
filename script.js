@@ -6,3 +6,16 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
+
+const voyageMap = document.getElementById("voyage-map");
+
+if (voyageMap) {
+  const routeObserver = new IntersectionObserver(
+    entries => entries.forEach(entry => {
+      if (entry.isIntersecting) voyageMap.dataset.route = entry.target.dataset.routeIndex;
+    }),
+    { rootMargin: "-35% 0px -45%", threshold: 0 }
+  );
+
+  document.querySelectorAll("[data-route-index]").forEach(project => routeObserver.observe(project));
+}

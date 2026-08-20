@@ -1,6 +1,6 @@
 # Uttam Bhattarai | Software Engineering Portfolio
 
-A dependency-free, recruiter-focused portfolio built with semantic HTML, modern CSS, and a few lines of JavaScript.
+My Portfolio built with semantic HTML, modern CSS, and a few lines of JavaScript.
 
 ## Preview
 

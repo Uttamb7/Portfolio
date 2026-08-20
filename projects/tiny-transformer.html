@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tiny Transformer LM case study: a GPT-style model, tokenizer, training loop, and evaluation system built from scratch.">
+  <title>Tiny Transformer LM Case Study | Uttam Bhattarai</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="case-page">
+  <header class="case-header"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">七</span><span>UTTAM<span class="dot">.</span>DEV</span></a><nav aria-label="Case study navigation"><a href="../index.html#work">All projects</a><a href="https://github.com/Uttamb7/tiny-transformer-lm">Source</a></nav></header>
+  <main class="case-main">
+    <section class="case-hero case-transformer">
+      <div class="case-hero-copy"><p class="case-kicker">03 / Machine-learning systems / 2026</p><h1>Tiny Transformer</h1><p class="case-hero-lede">A GPT-style language model built from first principles to inspect tokenization, causal attention, training stability, evaluation, and scaling rather than hide them behind a hosted API.</p><div class="case-actions"><a class="button button-primary" href="https://github.com/Uttamb7/tiny-transformer-lm">View source ↗</a><a class="button" href="../index.html#transformer">Back to portfolio</a></div></div>
+      <aside class="case-summary"><span>The specific problem</span><p>Understanding transformer behavior requires a measurable training system, not a chat interface wrapped around someone else's model.</p></aside>
+    </section>
+    <dl class="case-facts"><div><dt>Tiny model</dt><dd>859K parameters</dd></div><div><dt>Perplexity</dt><dd>17.93 validation</dd></div><div><dt>Attention</dt><dd>2.30x fused speed</dd></div><div><dt>Quality</dt><dd>88% coverage</dd></div></dl>
+    <div class="case-body">
+      <aside class="case-rail"><span>Technology</span><ul><li>Python</li><li>PyTorch</li><li>CUDA</li><li>NumPy</li><li>pytest</li></ul></aside>
+      <div class="case-content">
+        <section><h2>The challenge</h2><div><p>The project had to make every core mechanism inspectable: UTF-8-safe byte-level BPE, causal masking, multi-head attention, stable optimization, checkpoint recovery, controlled sampling, and exact validation.</p></div></section>
+        <section><h2>Training pipeline</h2><div><pre class="case-code">raw text -&gt; BPE tokenizer -&gt; uint16 token files
+         -&gt; random windows -&gt; GPT forward pass
+         -&gt; cross-entropy loss -&gt; AdamW update</pre><p>Checkpoints store the model configuration that created them, so loading does not depend on an external file remaining unchanged.</p></div></section>
+        <section><h2>Verification</h2><div><ul class="case-list"><li>32 tests cover tokenizer round trips, causal-mask behavior, manual and fused attention agreement, checkpoint equivalence, and training-loss reduction.</li><li>Manual attention and PyTorch fused attention are compared numerically before throughput is benchmarked.</li><li>Training detects divergence, clips gradients, schedules learning rate, and keeps both best and latest checkpoints.</li></ul></div></section>
+        <section><h2>Measured result</h2><div><p>The 859K-parameter configuration reached 17.93 validation perplexity in 134.8 seconds. Fused attention ran 2.30x faster than the explicit implementation on an RTX 4070 SUPER.</p><p>The 10.8M-parameter model trained 7.7x longer but improved perplexity only 4.3 percent over the tiny model. That result made diminishing returns visible instead of assuming that a larger model was automatically better.</p></div></section>
+      </div>
+    </div>
+    <div class="case-next"><span>Next case study</span><a href="e-store.html">E-Store Footware →</a></div>
+  </main>
+  <footer><span>© 2026 Uttam Bhattarai</span><a href="../index.html">Portfolio home ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="E-Store Footware case study: a tested Angular and Spring commerce application with distinct customer and administrator workflows.">
+  <title>E-Store Footware Case Study | Uttam Bhattarai</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="case-page">
+  <header class="case-header"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">七</span><span>UTTAM<span class="dot">.</span>DEV</span></a><nav aria-label="Case study navigation"><a href="../index.html#work">All projects</a><a href="https://github.com/Uttamb7/E-Store-Footware">Source</a></nav></header>
+  <main class="case-main">
+    <section class="case-hero case-store">
+      <div class="case-hero-copy"><p class="case-kicker">04 / Full-stack commerce / Team project</p><h1>E-Store Footware</h1><p class="case-hero-lede">A role-aware footwear store that separates customer buying flows from administrative inventory operations across a testable three-tier system.</p><div class="case-actions"><a class="button button-primary" href="https://github.com/Uttamb7/E-Store-Footware">View source ↗</a><a class="button" href="../index.html#estore">Back to portfolio</a></div></div>
+      <aside class="case-summary"><span>The specific problem</span><p>Customer browsing, cart, and checkout behavior must coexist with administrator inventory controls without mixing permissions or business logic.</p></aside>
+    </section>
+    <dl class="case-facts"><div><dt>Team</dt><dd>5 engineers</dd></div><div><dt>Backend</dt><dd>Java + Spring</dd></div><div><dt>Frontend</dt><dd>Angular + TypeScript</dd></div><div><dt>Design</dt><dd>3 explicit tiers</dd></div></dl>
+    <div class="case-body">
+      <aside class="case-rail"><span>Technology</span><ul><li>Java</li><li>Spring</li><li>Angular</li><li>TypeScript</li><li>Maven</li></ul></aside>
+      <div class="case-content">
+        <section><h2>The challenge</h2><div><p>The store had to coordinate product discovery, cart state, checkout, inventory mutation, and order visibility while keeping customer and administrator responsibilities distinct.</p><p>As a five-person academic team, the additional challenge was creating boundaries clear enough for parallel implementation and integration.</p></div></section>
+        <section><h2>Architecture</h2><div><ul class="case-list"><li><strong>Angular presentation:</strong> customer and administrator views own interaction and client-side state.</li><li><strong>Spring REST layer:</strong> controllers expose explicit workflows instead of leaking persistence details.</li><li><strong>Domain models:</strong> product, cart, user, and order behavior stays separate from transport concerns.</li><li><strong>DAO persistence:</strong> repository contracts isolate the JSON-backed data implementation.</li></ul></div></section>
+        <section><h2>Verification</h2><div><p>The Maven build supports controller, model, and persistence test tiers in isolation or together, plus JaCoCo HTML coverage reporting. The project portfolio reports more than 75 tests and 96 percent code coverage.</p><p>Acceptance criteria and generated design documentation gave the team a shared definition of behavior beyond the code itself.</p></div></section>
+        <section><h2>What it proves</h2><div><p>E-Store is not presented as production commerce infrastructure. Its value is the engineering discipline behind a full-stack team delivery: role-aware workflows, explicit layers, repeatable tests, and clear ownership boundaries.</p></div></section>
+      </div>
+    </div>
+    <div class="case-next"><span>Return to the route</span><a href="../index.html#work">All projects →</a></div>
+  </main>
+  <footer><span>© 2026 Uttam Bhattarai</span><a href="../index.html">Portfolio home ↑</a></footer>
+</body>
+</html>

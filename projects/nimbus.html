@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nimbus case study: a local operations control plane for a measured seven-service commerce workload.">
+  <title>Nimbus Case Study | Uttam Bhattarai</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="case-page">
+  <header class="case-header">
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">七</span><span>UTTAM<span class="dot">.</span>DEV</span></a>
+    <nav aria-label="Case study navigation"><a href="../index.html#work">All projects</a><a href="https://github.com/Uttamb7/Nimbus">Source</a></nav>
+  </header>
+  <main class="case-main">
+    <section class="case-hero">
+      <div class="case-hero-copy"><p class="case-kicker">01 / Distributed systems / 2026</p><h1>Nimbus</h1><p class="case-hero-lede">A local operations control plane that turns measured behavior from a seven-service commerce workload into topology, telemetry, incidents, and guarded operational actions.</p><div class="case-actions"><a class="button button-primary" href="https://github.com/Uttamb7/Nimbus">View source ↗</a><a class="button" href="../index.html#nimbus">Back to portfolio</a></div></div>
+      <aside class="case-summary"><span>The specific problem</span><p>Operators need to understand how one failing dependency affects the checkout path. Independent health checks cannot explain that chain.</p></aside>
+    </section>
+    <dl class="case-facts"><div><dt>Services</dt><dd>7 measured services</dd></div><div><dt>Interface</dt><dd>GraphQL control plane</dd></div><div><dt>Delivery</dt><dd>Docker + GitHub Actions</dd></div><div><dt>Status</dt><dd>In active development</dd></div></dl>
+    <div class="case-body">
+      <aside class="case-rail"><span>Technology</span><ul><li>Node.js</li><li>GraphQL</li><li>Docker</li><li>CI/CD</li><li>RBAC</li></ul></aside>
+      <div class="case-content">
+        <section><h2>The challenge</h2><div><p>Nimbus models a checkout path that crosses identity, order orchestration, inventory, payment, notification, and analytics boundaries. A failure can be healthy at the process level while still breaking the customer path.</p><p>The design goal was not another dashboard. It was a system that could derive relationships from real traffic and connect symptoms to the services they affect.</p></div></section>
+        <section><h2>System design</h2><div><ul class="case-list"><li><strong>Observed topology:</strong> outbound HTTP calls report status and duration, so dependency edges are measured rather than hard-coded.</li><li><strong>Operational model:</strong> the engine calculates request rate, error rate, p95 latency, availability, SLO compliance, and error budget.</li><li><strong>Incident context:</strong> repeated threshold violations create one active incident and topology traversal identifies affected services.</li><li><strong>Guardrails:</strong> bearer identity, role-based actions, query limits, rate limits, and an immutable audit stream protect operational mutations.</li></ul><pre class="case-code">gateway -&gt; identity-api
+gateway -&gt; order-orchestrator -&gt; inventory-api
+                            -&gt; payment-worker
+                            -&gt; notification-router
+                            -&gt; analytics-ingestor</pre></div></section>
+        <section><h2>Evidence</h2><div><p>Every pull request runs dependency auditing, coverage thresholds, Compose validation, and a distributed smoke test. The smoke test starts the full workload, performs a checkout, and verifies that Nimbus observed the expected dependency edges.</p><p>Failure scenarios can inject bounded status and latency faults, record the action, show incident impact, and restore the service without restarting the environment.</p></div></section>
+        <section><h2>Honest limits</h2><div><p>Nimbus runs locally and does not claim AWS deployment. Event transport is currently HTTP, retries are held in memory, and delivery is at-least-once. Those constraints are documented because reliability work is only useful when its boundaries are explicit.</p></div></section>
+      </div>
+    </div>
+    <div class="case-next"><span>Next case study</span><a href="trip-planner.html">Trip Planner →</a></div>
+  </main>
+  <footer><span>© 2026 Uttam Bhattarai</span><a href="../index.html">Portfolio home ↑</a></footer>
+</body>
+</html>

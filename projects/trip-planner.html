@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trip Planner case study: an offline-capable planning workspace for a real Nepal and Japan journey.">
+  <title>Trip Planner Case Study | Uttam Bhattarai</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="case-page">
+  <header class="case-header"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">七</span><span>UTTAM<span class="dot">.</span>DEV</span></a><nav aria-label="Case study navigation"><a href="../index.html#work">All projects</a><a href="https://powan55.github.io/trip_planner/">Live product</a></nav></header>
+  <main class="case-main">
+    <section class="case-hero case-trip">
+      <div class="case-hero-copy"><p class="case-kicker">02 / Full-stack PWA / 2026</p><h1>Trip Planner</h1><p class="case-hero-lede">A resilient planning workspace for a 32-day Nepal and Japan journey, designed around unreliable networks, shared decisions, and information that must remain useful on the move.</p><div class="case-actions"><a class="button button-primary" href="https://powan55.github.io/trip_planner/">Open live product ↗</a><a class="button" href="https://github.com/Uttamb7/trip_planner">View source ↗</a></div></div>
+      <aside class="case-summary"><span>The specific problem</span><p>Itinerary, budget, documents, maps, and group changes must stay available across devices even when travelers lose connectivity.</p></aside>
+    </section>
+    <dl class="case-facts"><div><dt>Trip</dt><dd>32 planned days</dd></div><div><dt>Offline</dt><dd>Installable PWA shell</dd></div><div><dt>Map</dt><dd>MapLibre + CARTO</dd></div><div><dt>Sync</dt><dd>Optional Firebase</dd></div></dl>
+    <div class="case-body">
+      <aside class="case-rail"><span>Technology</span><ul><li>Next.js</li><li>TypeScript</li><li>Firebase</li><li>MapLibre</li><li>PWA</li></ul></aside>
+      <div class="case-content">
+        <section><h2>The challenge</h2><div><p>Travel planning becomes a systems problem when the plan spans two countries, many cities, multiple people, and unreliable networks. A usable solution has to preserve context, work on phones, and avoid turning every feature into a cloud dependency.</p></div></section>
+        <section><h2>Product shape</h2><div><ul class="case-list"><li><strong>Local-first planning:</strong> itinerary changes and core trip state remain usable on the device.</li><li><strong>Offline delivery:</strong> a service worker precaches the application shell and surfaces updates instead of silently refreshing.</li><li><strong>Optional synchronization:</strong> Firebase mirrors trip data when configured while the application remains functional without it.</li><li><strong>Real geographic context:</strong> MapLibre renders destinations, categories, popups, and itinerary overlays without a paid map key.</li></ul></div></section>
+        <section><h2>Engineering decisions</h2><div><p>The application is a Next.js static export so it can ship to GitHub Pages. Photos use IndexedDB, lighter preferences stay local, and capability-scoped trip sharing keeps collaboration explicit.</p><p>The interface supports keyboard navigation, reduced motion, small-screen layouts, and a command palette because travel tools are often used quickly and under imperfect conditions.</p></div></section>
+        <section><h2>Evidence</h2><div><p>The release pipeline validates repository hygiene and versioning before publishing. Firestore rules are tested against the real local rules engine across eleven phases, including signed-out, member, owner, and stranger behavior.</p><p>The live product is public and installable, making the work directly inspectable rather than a design-only prototype.</p></div></section>
+      </div>
+    </div>
+    <div class="case-next"><span>Next case study</span><a href="tiny-transformer.html">Tiny Transformer →</a></div>
+  </main>
+  <footer><span>© 2026 Uttam Bhattarai</span><a href="../index.html">Portfolio home ↑</a></footer>
+</body>
+</html>
